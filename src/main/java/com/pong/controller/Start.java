@@ -1,3 +1,10 @@
+package com.pong.controller;
+
+import com.pong.model.GameThread;
+import com.pong.model.Rectangle;
+import com.pong.model.Velocity;
+import com.pong.model.entity.Ball;
+import com.pong.model.entity.Player;
 import javazoom.jl.decoder.JavaLayerException;
 
 import javax.imageio.ImageIO;
@@ -46,7 +53,7 @@ public class Start extends Game {
 
     public static void main(String[] args) {
         try {
-            InputStream is = Start.class.getResourceAsStream("images/icons/icon.png");
+            InputStream is = Start.class.getResourceAsStream("/images/icons/icon.png");
             BufferedImage bufferedImage = ImageIO.read(is);
 
             Start start = new Start("My game", SCREEN_WIDTH, SCREEN_HEIGHT, 3, bufferedImage);
@@ -87,7 +94,7 @@ public class Start extends Game {
             return;
         }
 
-        // Player controls
+        // com.pong.model.entity.Player controls
         if(controls.leftPressed) {
             player.v.x = -PLAYER_VELOCITY;
             if(!didMove) {
@@ -138,7 +145,7 @@ public class Start extends Game {
             return;
         }
 
-        // Player collision
+        // com.pong.model.entity.Player collision
         if(ballBounds.x + ballBounds.width >= player.bounds.x && ballBounds.x <= player.bounds.x + player.bounds.width &&
                 ballBounds.y + ballBounds.height >= player.bounds.y && ballBounds.y <= player.bounds.y + player.bounds.height) {
             // check direction of collision

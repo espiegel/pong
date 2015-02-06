@@ -1,3 +1,9 @@
+package com.pong.controller;
+
+import com.pong.controller.Game;
+import com.pong.view.GameComponents;
+import com.pong.view.GameWindow;
+
 import java.awt.event.KeyListener;
 
 /**

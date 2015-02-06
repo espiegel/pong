@@ -1,3 +1,8 @@
+package com.pong.model;
+
+import com.pong.controller.Game;
+import com.pong.controller.GameLoop;
+
 import java.awt.event.KeyListener;
 
 /**
@@ -9,7 +14,7 @@ public class GameThread extends Thread {
 
     public GameThread(Game game, KeyListener controls) {
         loop = new GameLoop(game, controls);
-        gameLoopThread = new Thread(loop, game.title + " loop thread");
+        gameLoopThread = new Thread(loop, game.getTitle() + " loop thread");
     }
 
     @Override

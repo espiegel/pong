@@ -1,3 +1,7 @@
+package com.pong.view;
+
+import com.pong.controller.Game;
+
 import javax.swing.*;
 import java.awt.event.KeyListener;
 
@@ -13,12 +17,12 @@ public class GameWindow {
         gameComponent = new GameComponents(game);
         window = new JFrame();
 
-        window.setTitle(game.title);
-        window.setSize(game.width, game.height);
+        window.setTitle(game.getTitle());
+        window.setSize(game.getWidth(), game.getHeight());
 
         window.setLocale(null);
         window.setResizable(false);
-        window.setIconImage(game.iconImage);
+        window.setIconImage(game.getIconImage());
 
         window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 

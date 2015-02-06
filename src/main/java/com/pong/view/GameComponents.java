@@ -1,3 +1,7 @@
+package com.pong.view;
+
+import com.pong.controller.Game;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ComponentEvent;
