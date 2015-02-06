@@ -13,6 +13,6 @@ public class Ball extends Entity {
 
     @Override
     public void update() {
-
+        super.update();
     }
 }

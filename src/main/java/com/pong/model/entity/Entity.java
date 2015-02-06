@@ -14,6 +14,9 @@ public abstract class Entity {
         this.bounds = bounds;
     }
 
-    public abstract void update();
+    public void update() {
+        bounds.x += v.x;
+        bounds.y += v.y;
+    }
 
 }

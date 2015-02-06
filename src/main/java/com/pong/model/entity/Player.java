@@ -13,6 +13,6 @@ public class Player extends Entity {
 
     @Override
     public void update() {
-
+        super.update();
     }
 }

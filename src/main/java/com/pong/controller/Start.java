@@ -109,13 +109,11 @@ public class Start extends Game {
             player.v.x = 0;
         }
 
-        player.bounds.x += player.v.x;
+        player.update();
         clipPlayerBounds();
 
         oldBallBounds = ball.bounds.copy();
-        ball.bounds.x += ball.v.x;
-        ball.bounds.y += ball.v.y;
-        //System.out.println("ball bounds = " + ball.bounds);
+        ball.update();
         clipBallBounds();
         checkBallCollision();
     }
